@@ -91,6 +91,7 @@ set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 
 set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
+# target_link_libraries(lydia-bin libcudd.a)
 find_package(CUDD REQUIRED)
 find_package(MONA REQUIRED)
 find_package(Syft REQUIRED)
