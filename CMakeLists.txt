@@ -18,6 +18,7 @@
 # CMake build : global project
 
 cmake_minimum_required(VERSION 3.10)
+add_definitions(-w)
 
 project (Lydia
          LANGUAGES CXX
@@ -92,6 +93,11 @@ set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
 set(CUDD_LIBRARIES libcudd.a)
 find_package(MONA REQUIRED)
+# set(MONA_LIBRARIES 
+# libmonabdd.a
+# libmonadfa.a
+# libmonagta.a
+# libmonamem.a)
 # set(MONA_LIBRARIES libmonamem.a)
 find_package(Syft REQUIRED)
 # set(SYFT_LIBRARIES libsynthesis.a)
