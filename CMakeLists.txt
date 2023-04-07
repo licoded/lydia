@@ -93,14 +93,16 @@ set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
 set(CUDD_LIBRARIES libcudd.a)
 find_package(MONA REQUIRED)
-# set(MONA_LIBRARIES 
-# libmonabdd.a
-# libmonadfa.a
-# libmonagta.a
-# libmonamem.a)
+set(MONA_LIBRARIES 
+libmonamem.a
+libmonadfa.a
+libmonagta.a
+libmonabdd.a
+)
 # set(MONA_LIBRARIES libmonamem.a)
 find_package(Syft REQUIRED)
-# set(SYFT_LIBRARIES libsynthesis.a)
+# set(Syft_LIBRARIES libsynthesis.so)
+set(SYFT_LIBRARIES libsynthesis.a)
 find_package(Graphviz REQUIRED)
 find_package(BISON 3.0 REQUIRED)
 find_package(FLEX 2.6 REQUIRED)
