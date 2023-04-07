@@ -98,7 +98,7 @@ find_package(Syft REQUIRED)
 find_package(Graphviz REQUIRED)
 find_package(BISON 3.0 REQUIRED)
 find_package(FLEX 2.6 REQUIRED)
-# set(FLEX_LIBRARIES libfl.a)
+set(FLEX_LIBRARIES libfl.a)
 
 add_subdirectory (third_party EXCLUDE_FROM_ALL)
 add_subdirectory (lib)
