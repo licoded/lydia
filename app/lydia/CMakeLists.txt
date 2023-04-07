@@ -20,6 +20,8 @@
 #configure variables
 # we append '-bin' because 'lydia' conflicts with the library.
 set (APP_NAME "lydia-bin")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static")
 
 #configure directories
 set (APP_MODULE_PATH "${PROJECT_SOURCE_DIR}/app/lydia")
@@ -33,6 +35,7 @@ file (GLOB APP_SOURCE_FILES "${APP_SRC_PATH}/*.cpp")
 
 #set target executable
 add_executable (${APP_NAME} ${APP_SOURCE_FILES})
+set_target_properties(${APP_NAME} PROPERTIES LINK_FLAGS "-static-libstdc++ -static-libgcc")
 
 #add the library
 target_link_libraries (${APP_NAME} ${LIB_NAME} libpthread.a)
