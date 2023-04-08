@@ -90,9 +90,16 @@ set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 set (CMAKE_SKIP_INSTALL_ALL_DEPENDENCY TRUE)
 
 set (THREADS_PREFER_PTHREAD_FLAG ON)
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 find_package (Threads REQUIRED)
 find_package(CUDD REQUIRED)
 find_package(MONA REQUIRED)
+set(MONA_LIBRARIES 
+monamem
+monadfa
+monagta
+monabdd
+)
 find_package(Syft REQUIRED)
 find_package(Graphviz REQUIRED)
 find_package(BISON 3.0 REQUIRED)
