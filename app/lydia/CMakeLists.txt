@@ -36,8 +36,9 @@ add_executable (${APP_NAME} ${APP_SOURCE_FILES})
 
 
 #add the library
-link_libraries(cdt)
-target_link_libraries (${APP_NAME} ${LIB_NAME} pthread ${GRAPHVIZ_LIBRARIES})
+target_link_libraries (${APP_NAME} ${LIB_NAME} Threads::Threads)
+# link_libraries(cdt)
+# target_link_libraries (${APP_NAME} ${LIB_NAME} Threads::Threads ${GRAPHVIZ_LIBRARIES})
 set_target_properties(${APP_NAME} PROPERTIES LINK_FLAGS "-static -static-libstdc++ -static-libgcc")
 
 set_target_properties(${APP_NAME} PROPERTIES OUTPUT_NAME lydia)
