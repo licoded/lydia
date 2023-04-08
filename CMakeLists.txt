@@ -91,22 +91,12 @@ set (CMAKE_SKIP_INSTALL_ALL_DEPENDENCY TRUE)
 
 set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
-set(CUDD_LIBRARIES cudd)
+find_package(CUDD REQUIRED)
 find_package(MONA REQUIRED)
-set(MONA_LIBRARIES 
-monamem
-monadfa
-monagta
-monabdd
-)
-# set(MONA_LIBRARIES monamem)
 find_package(Syft REQUIRED)
-# set(Syft_LIBRARIES libsynthesis.so)
-set(SYFT_LIBRARIES synthesis)
 find_package(Graphviz REQUIRED)
 find_package(BISON 3.0 REQUIRED)
 find_package(FLEX 2.6 REQUIRED)
-set(FLEX_LIBRARIES fl)
 
 add_subdirectory (third_party EXCLUDE_FROM_ALL)
 add_subdirectory (lib)

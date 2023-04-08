@@ -36,7 +36,7 @@ file (GLOB TEST_SOURCE_FILES "${TEST_SRC_PATH}/*.cpp")
 #add_executable (${TEST_APP_NAME} ${TEST_SOURCE_FILES})
 
 #add the library
-#target_link_libraries (${TEST_APP_NAME} ${APP_NAME} libpthread.a ${CUDD_LIBRARIES})
+#target_link_libraries (${TEST_APP_NAME} ${APP_NAME} Threads::Threads ${CUDD_LIBRARIES})
 
 #enable_testing ()
 

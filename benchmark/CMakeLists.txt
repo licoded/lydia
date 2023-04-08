@@ -45,7 +45,7 @@ target_link_libraries (${BENCHMARK_APP_NAME}
         ${CUDD_LIBRARIES}
         ${MONA_LIBRARIES}
         benchmark::benchmark
-        libpthread.a)
+        Threads::Threads)
 
 add_custom_target(lydia-benchmark
         COMMAND ${CMAKE_BINARY_DIR}/bin/${BENCHMARK_APP_NAME}

@@ -39,7 +39,7 @@ add_executable (${TEST_APP_NAME} ${TEST_SOURCE_FILES} ${TEST_HEADER_FILES})
 #add the library
 target_link_libraries (${TEST_APP_NAME}
         ${LIB_NAME}
-        pthread)
+        Threads::Threads)
 
 # Turn on CMake testing capabilities
 enable_testing()
